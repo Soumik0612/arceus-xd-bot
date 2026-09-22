@@ -1,7 +1,7 @@
 /**
  * ====================================================================
  *                 ⚡ ARCEUS XD - CONFIGURATION ⚡
- *                       Owner: SOUMIK DEY
+ *                       Owner: SOUMIK
  * ====================================================================
  */
 
@@ -15,9 +15,9 @@ module.exports = {
     PLATFORM: process.env.PLATFORM || '🚉 Railway',
     
     // OWNER DETAILS
-    OWNER_NAME: process.env.OWNER_NAME || '𝗦𝗢𝗨𝗠𝗜𝗞 𝗗𝗘𝗬',
-    OWNER_NUMBER: process.env.OWNER_NUMBER || '919876543210',
-    SUDO: process.env.SUDO ? process.env.SUDO.split(',') : ['919876543210'],
+    OWNER_NAME: process.env.OWNER_NAME || '𝗦𝗢𝗨𝗠𝗜𝗞',
+    OWNER_NUMBER: process.env.OWNER_NUMBER || '918420027377',
+    SUDO: process.env.SUDO ? process.env.SUDO.split(',') : ['918420027377'],
 
     // BOT OPERATION
     PREFIX: process.env.PREFIX || '.',
@@ -40,7 +40,7 @@ module.exports = {
     TG_BOT_TOKEN: process.env.TG_BOT_TOKEN || '', // Token from @BotFather
     TG_OWNER_ID: process.env.TG_OWNER_ID || '',   // Telegram ID from @userinfobot
     USE_PAIRING_CODE: process.env.USE_PAIRING_CODE !== 'false',
-    PAIRING_NUMBER: process.env.PAIRING_NUMBER || process.env.OWNER_NUMBER || '919876543210',
+    PAIRING_NUMBER: process.env.PAIRING_NUMBER || process.env.OWNER_NUMBER || '918420027377',
     
     // AI ENGINE
     GEMINI_API_KEY: process.env.GEMINI_API_KEY || '',
