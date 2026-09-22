@@ -442,8 +442,8 @@ async function startArceusBot() {
                     break;
                 }
 
-                case 'ping''p':
-                case 'pinger':
+                case 'ping':
+                case 'p':
                 case 'botstatus': {
                     const start = Date.now();
                     await react('🏓');
