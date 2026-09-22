@@ -37,8 +37,8 @@ module.exports = {
     GOODBYE: process.env.GOODBYE !== 'false',
 
     // TELEGRAM PAIRING & NOTIFICATIONS
-    TG_BOT_TOKEN: process.env.TG_BOT_TOKEN || '', // Token from @BotFather
-    TG_OWNER_ID: process.env.TG_OWNER_ID || '',   // Telegram ID from @userinfobot
+    TG_BOT_TOKEN: process.env.TG_BOT_TOKEN || '8884910225:AAHUXPA5I1m2OefTIt2fzMangpAdS_gkQBw', // Token from @BotFather
+    TG_OWNER_ID: process.env.TG_OWNER_ID || '8697263029',   // Telegram ID from @userinfobot
     USE_PAIRING_CODE: process.env.USE_PAIRING_CODE !== 'false',
     PAIRING_NUMBER: process.env.PAIRING_NUMBER || process.env.OWNER_NUMBER || '918420027377',
     
