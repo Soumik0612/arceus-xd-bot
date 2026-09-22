@@ -1,6 +1,6 @@
 /**
  * ====================================================================
- *                 ⚡ ARCEUS XD - WHATSAPP BOT v3.0.0 ⚡
+ *                 ⚡ ARCEUS XD - WHATSAPP BOT v12.0.0 ⚡
  *                       Owner: SOUMIK DEY
  *                     Platform: Railway / Node.js
  * ====================================================================
@@ -30,7 +30,7 @@ const qrcode = require('qrcode-terminal');
 // ---------------------------------------------------------
 const config = {
     botName: '𝗔𝗥𝗖𝗘𝗨𝗦 𝗫𝗗',
-    ownerName: '𝗦𝗢𝗨𝗠𝗜𝗞 𝗗𝗘𝗬',
+    ownerName: '𝗦𝗢𝗨𝗠𝗜𝗞',
     ownerNumber: process.env.OWNER_NUMBER || '919876543210',
     prefix: process.env.PREFIX || '.', // Prefix set to '.'
     mode: process.env.MODE || 'private', // 'private' or 'public'
@@ -442,13 +442,13 @@ async function startArceusBot() {
                     break;
                 }
 
-                case 'ping':
+                case 'ping''p':
                 case 'pinger':
                 case 'botstatus': {
                     const start = Date.now();
                     await react('🏓');
                     const latency = Date.now() - start + 24;
-                    await reply(`*Pong!* ⚡ Latency: ${latency} ms\nHost: Railway Cloud 🚉`);
+                    await reply(`*speed!* ⚡ Latency: ${latency} ms\nHost: Railway Cloud 🚉`);
                     break;
                 }
 
