@@ -1,7 +1,7 @@
 {
   "name": "arceus-xd-whatsapp-bot",
   "version": "12.0.0",
-  "description": "ARCEUS XD WhatsApp UserBot with 480 commands and Railway Cloud support",
+  "description": "ARCEUS XD WhatsApp UserBot ",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
