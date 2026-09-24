@@ -1,8 +1,3 @@
-/**
- * Plugin: AI Commands
- * Category: AI-CMD (14 commands)
- */
-
 module.exports = {
     name: 'ai',
     commands: [
