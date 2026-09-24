@@ -1,13 +1,3 @@
-/**
- * ====================================================================
- *                 ⚡ ARCEUS XD - WHATSAPP BOT v12.0.0 ⚡
- *                       Owner: SOUMIK DEY
- *                     Platform: Railway / Node.js
- * ====================================================================
- * A powerful, multi-purpose WhatsApp Bot built with @whiskeysockets/baileys.
- * Features 480 commands across 21 categories with pairing code & QR support.
- */
-
 const {
     default: makeWASocket,
     useMultiFileAuthState,
@@ -25,16 +15,14 @@ const os = require('os');
 const express = require('express');
 const qrcode = require('qrcode-terminal');
 
-// ---------------------------------------------------------
-// BOT CONFIGURATION
-// ---------------------------------------------------------
+
 const config = {
-    botName: '𝗔𝗥𝗖𝗘𝗨𝗦 𝗫𝗗',
-    ownerName: '𝗦𝗢𝗨𝗠𝗜𝗞',
-    ownerNumber: process.env.OWNER_NUMBER || '919876543210',
+    botName: 'ARCEUS XD',
+    ownerName: 'SOUMIK',
+    ownerNumber: process.env.OWNER_NUMBER || '917602624961',
     prefix: process.env.PREFIX || '.', // Prefix set to '.'
     mode: process.env.MODE || 'private', // 'private' or 'public'
-    platform: process.env.PLATFORM || '🚉 Railway',
+    platform: process.env.PLATFORM || '',
     version: process.env.BOT_VERSION || 'v12.0.0',
     port: process.env.PORT || 3000,
     sessionDir: './session',
@@ -50,10 +38,6 @@ const config = {
 
 const startTime = Date.now();
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
-
-// ---------------------------------------------------------
-// 480 COMMANDS ACROSS 21 CATEGORIES (SAME TO SAME)
-// ---------------------------------------------------------
 const COMMAND_CATEGORIES = {
     'GEN-CMD': [
         'alive', 'apk', 'attp', 'botinfo', 'botstatus', 'checkwa', 'circlesticker',
@@ -184,10 +168,6 @@ const COMMAND_CATEGORIES = {
         'tutorial', 'uguu'
     ]
 };
-
-// ---------------------------------------------------------
-// HELPER FUNCTIONS
-// ---------------------------------------------------------
 function formatUptime(seconds) {
     const d = Math.floor(seconds / (3600 * 24));
     const h = Math.floor((seconds % (3600 * 24)) / 3600);
@@ -258,10 +238,6 @@ function buildArceusMenu(categoryFilter = null) {
 
     return menu.trim();
 }
-
-// ---------------------------------------------------------
-// BAILEYS WHATSAPP BOT CLIENT
-// ---------------------------------------------------------
 async function startArceusBot() {
     console.log(`\n==============================================`);
     console.log(`⚡ STARTING ${config.botName} (v${config.version})`);
@@ -515,10 +491,6 @@ async function startArceusBot() {
 
     return sock;
 }
-
-// ---------------------------------------------------------
-// EXPRESS KEEP-ALIVE SERVER (RAILWAY COMPLIANCE)
-// ---------------------------------------------------------
 const app = express();
 app.use(express.json());
 
@@ -529,8 +501,8 @@ app.get('/', (req, res) => {
         platform: config.platform,
         version: config.version,
         mode: config.mode,
-        totalCommands: 480,
-        status: 'ONLINE'
+        totalCommands: config.commandcount,
+        status: config.active,
     });
 });
 
